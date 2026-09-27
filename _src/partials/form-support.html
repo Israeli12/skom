@@ -1,0 +1,36 @@
+<!-- FORM DELIVERY: with data-endpoint empty, submitting opens the visitor's email app addressed to data-mailto. Set data-endpoint to a form service URL (e.g. Formspree) for direct sending, or rebuild with Elementor Forms. -->
+<form class="skom-form" data-endpoint="" data-mailto="ssesekidsoutreachministries@gmail.com" novalidate aria-describedby="support-form-note">
+  <div class="form-row">
+    <div class="field">
+      <label for="s-name">Full name <span class="req" aria-hidden="true">*</span></label>
+      <input id="s-name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="s-email">Email address <span class="req" aria-hidden="true">*</span></label>
+      <input id="s-email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+  <div class="field">
+    <label for="s-way">How would you like to help? <span class="req" aria-hidden="true">*</span></label>
+    <select id="s-way" name="support_type" required>
+      <option value="">Choose one…</option>
+      <option value="give">I would like to give financially</option>
+      <option value="materials">Scholastic materials or in-kind support</option>
+      <option value="church">Mobilise my church or fellowship</option>
+      <option value="skills">Offer my skills or time</option>
+      <option value="advocate">Share SKOM with my network</option>
+      <option value="other">Something else</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="s-msg">Message <span class="opt">(optional)</span></label>
+    <textarea id="s-msg" name="message" rows="5"></textarea>
+  </div>
+  <div class="field field-check">
+    <input id="s-consent" name="consent" type="checkbox" required>
+    <label for="s-consent">I agree that SKOM may contact me about supporting its work. <span class="req" aria-hidden="true">*</span></label>
+  </div>
+  <p class="form-note" id="support-form-note">Please do not send card or bank details through this form. SKOM will reply with the appropriate next steps.</p>
+  <button class="btn btn-blue" type="submit">Send my support enquiry [[icon arrow]]</button>
+  <div class="form-status" role="status" aria-live="polite" hidden></div>
+</form>

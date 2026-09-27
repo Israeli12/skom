@@ -1,0 +1,6 @@
+# Original media: too large for GitHub and may contain location metadata
+content/
+# Local tooling
+.claude/
+__pycache__/
+*.pyc

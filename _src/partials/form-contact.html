@@ -1,0 +1,46 @@
+<!-- FORM DELIVERY: with data-endpoint empty, submitting opens the visitor's email app addressed to data-mailto. Set data-endpoint to a form service URL (e.g. Formspree) for direct sending, or rebuild with Elementor Forms. -->
+<form class="skom-form" data-endpoint="" data-mailto="ssesekidsoutreachministries@gmail.com" novalidate aria-describedby="contact-form-note">
+  <div class="form-row">
+    <div class="field">
+      <label for="c-name">Full name <span class="req" aria-hidden="true">*</span></label>
+      <input id="c-name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="c-email">Email address <span class="req" aria-hidden="true">*</span></label>
+      <input id="c-email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="field">
+      <label for="c-phone">Phone or WhatsApp <span class="opt">(optional)</span></label>
+      <input id="c-phone" name="phone" type="tel" autocomplete="tel">
+    </div>
+    <div class="field">
+      <label for="c-type">What is your enquiry about? <span class="req" aria-hidden="true">*</span></label>
+      <select id="c-type" name="enquiry_type" required>
+        <option value="">Choose one…</option>
+        <option value="general">General enquiry</option>
+        <option value="partnership">Partnership enquiry</option>
+        <option value="support">Supporting SKOM</option>
+        <option value="volunteer">Getting involved / volunteering</option>
+        <option value="church">Church or faith-based collaboration</option>
+        <option value="media">Media or stories</option>
+      </select>
+    </div>
+  </div>
+  <div class="field">
+    <label for="c-org">Organisation or church <span class="opt">(optional)</span></label>
+    <input id="c-org" name="organisation" type="text" autocomplete="organization">
+  </div>
+  <div class="field">
+    <label for="c-msg">Your message <span class="req" aria-hidden="true">*</span></label>
+    <textarea id="c-msg" name="message" rows="6" required></textarea>
+  </div>
+  <div class="field field-check">
+    <input id="c-consent" name="consent" type="checkbox" required>
+    <label for="c-consent">I agree that SKOM may use these details to reply to my enquiry. <span class="req" aria-hidden="true">*</span></label>
+  </div>
+  <p class="form-note" id="contact-form-note">Fields marked <span class="req">*</span> are required. To raise a concern about a child’s safety, please see our <a href="/programs/child-protection/#report">safeguarding guidance</a>.</p>
+  <button class="btn btn-blue" type="submit">Send message [[icon arrow]]</button>
+  <div class="form-status" role="status" aria-live="polite" hidden></div>
+</form>

@@ -1,0 +1,63 @@
+<!-- FORM DELIVERY: with data-endpoint empty, submitting opens the visitor's email app addressed to data-mailto. Set data-endpoint to a form service URL (e.g. Formspree) for direct sending, or rebuild with Elementor Forms. -->
+<form class="skom-form" data-endpoint="" data-mailto="ssesekidsoutreachministries@gmail.com" novalidate aria-describedby="partner-form-note">
+  <div class="form-row">
+    <div class="field">
+      <label for="p-org">Organisation, church or company <span class="req" aria-hidden="true">*</span></label>
+      <input id="p-org" name="organisation" type="text" autocomplete="organization" required>
+    </div>
+    <div class="field">
+      <label for="p-type">Type of partner <span class="req" aria-hidden="true">*</span></label>
+      <select id="p-type" name="partner_type" required>
+        <option value="">Choose one…</option>
+        <option value="development">Development agency / NGO</option>
+        <option value="foundation">Foundation or trust</option>
+        <option value="corporate">Corporate partner</option>
+        <option value="faith">Church or faith-based institution</option>
+        <option value="community">Community or local leadership</option>
+        <option value="individual">Individual well-wisher</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="field">
+      <label for="p-name">Contact person <span class="req" aria-hidden="true">*</span></label>
+      <input id="p-name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="p-email">Email address <span class="req" aria-hidden="true">*</span></label>
+      <input id="p-email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="field">
+      <label for="p-phone">Phone <span class="opt">(optional)</span></label>
+      <input id="p-phone" name="phone" type="tel" autocomplete="tel">
+    </div>
+    <div class="field">
+      <label for="p-country">Country <span class="opt">(optional)</span></label>
+      <input id="p-country" name="country" type="text" autocomplete="country-name">
+    </div>
+  </div>
+  <fieldset class="field fieldset">
+    <legend>Areas of interest <span class="opt">(choose any)</span></legend>
+    <div class="check-list">
+      <label class="check-pill"><input type="checkbox" name="interest" value="learning"> Learning &amp; Skills</label>
+      <label class="check-pill"><input type="checkbox" name="interest" value="wellbeing"> Well-being</label>
+      <label class="check-pill"><input type="checkbox" name="interest" value="protection"> Child Protection</label>
+      <label class="check-pill"><input type="checkbox" name="interest" value="community"> Family &amp; Community</label>
+      <label class="check-pill"><input type="checkbox" name="interest" value="whole-program"> The whole 2026–2029 program</label>
+    </div>
+  </fieldset>
+  <div class="field">
+    <label for="p-msg">Tell us about your interest in partnering <span class="req" aria-hidden="true">*</span></label>
+    <textarea id="p-msg" name="message" rows="6" required></textarea>
+  </div>
+  <div class="field field-check">
+    <input id="p-consent" name="consent" type="checkbox" required>
+    <label for="p-consent">I agree that SKOM may use these details to respond to this partnership enquiry. <span class="req" aria-hidden="true">*</span></label>
+  </div>
+  <p class="form-note" id="partner-form-note">Fields marked <span class="req">*</span> are required. We can share SKOM’s strategic partnership and resource mobilisation program on request.</p>
+  <button class="btn btn-blue" type="submit">Send partnership enquiry [[icon arrow]]</button>
+  <div class="form-status" role="status" aria-live="polite" hidden></div>
+</form>
