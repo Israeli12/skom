@@ -1,5 +1,7 @@
-# Original media: too large for GitHub and may contain location metadata
+# Original media: kept locally, not published (photos/videos of children)
 content/
+# Full-size originals too large for GitHub
+_originals/
 # Local tooling
 .claude/
 __pycache__/

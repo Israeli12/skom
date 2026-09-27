@@ -6,7 +6,7 @@ SKOM is a Christ-centred, community-based organisation working to nurture, prote
 - `website/` — the finished static site (deploy this folder). Clean URLs: `/about/`, `/programs/…`, etc.
 - `_src/` — page sources. Edit `_src/pages/*.html` or `_src/partials/*`, then run `python _src/build.py`.
 - `website/assets/css/styles.css` — all styles (flexbox only, no CSS Grid). The `:root` tokens map to Elementor Global Colors and Fonts.
-- `content/` — original photos and videos. Kept locally only, not in this repository: too large for GitHub, and the originals may contain location metadata. Web images are in `website/assets/img/` as WebP, in `-lg` and `-sm` sizes.
+- `content/` — original photos and videos, kept locally and not in this repository. `pastor's interview.mp4` there is a compressed copy (84.8MB); the full-size original is in `_originals/`.
 
 Preview locally: `python -m http.server 8765 --directory website`, then open http://localhost:8765
 
@@ -29,7 +29,7 @@ Colours: Deep Blue `#0B2D63`, Vibrant Green `#1C7A3E` / `#2FA85A`, Warm Yellow `
 ## Waiting on SKOM (search the HTML for `PLACEHOLDER`)
 - Phone / WhatsApp number. (Email is live: ssesekidsoutreachministries@gmail.com. Forms currently open the visitor's email app addressed to it; set `data-endpoint` in `_src/partials/form-*.html` to a form service, or use Elementor Forms, for direct sending.)
 - Domain. Set `SITE_URL` in `_src/build.py` to enable canonical and og:url tags.
-- Social media links, and donation methods.
+- Other social media accounts (Facebook is live), and donation methods.
 - Founding year and founding story; target islands and landing sites.
 - Designated safeguarding contact; the Child Protection Policy PDF.
 - Parent/guardian consent for the published photos of children.
