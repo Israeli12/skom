@@ -739,7 +739,7 @@ h1 em, h2 em, h3 em, .display em { font-style: italic; font-weight: 500; color: 
   .accordion summary { padding: 18px; font-size: 1.05rem; }
   .accordion .acc-body { padding: 0 18px 18px; }
   .target-num { font-size: 5.2rem; }
-  .footer-main { gap: 32px; padding-top: 48px; }
+  .footer-main { gap: 32px; padding-top: 48px; padding-bottom: 40px; }
   .footer-col { flex-basis: calc(50% - 16px); }
   .footer-about, .footer-contact { flex-basis: 100%; }
 }
@@ -787,3 +787,7 @@ a.card-link h3 { color: var(--blue-900); }
 .footer-email { word-break: break-all; }
 .social-link { display: inline-flex; align-items: center; gap: 8px; }
 .social-link .icon { width: 20px; height: 20px; }
+.social-row { display: flex; gap: 10px; margin-top: 4px; }
+.social-row a { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .18); color: #E3EAF6; transition: background-color .2s, color .2s; }
+.social-row a:hover { background: var(--yellow-400); color: var(--blue-950); border-color: var(--yellow-400); }
+.social-row .icon { width: 20px; height: 20px; }
