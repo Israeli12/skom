@@ -21,7 +21,7 @@ IMG = OUT / "assets" / "img"
 
 # Set this once the domain is confirmed (e.g. "https://www.example.org").
 # While empty, canonical/og:url tags are omitted rather than guessed.
-SITE_URL = ""
+SITE_URL = "https://skom.vercel.app"
 
 SITE_NAME = "Ssesse Kids Outreach Ministries (SKOM)"
 
@@ -154,8 +154,10 @@ def head(meta):
     desc = meta["description"]
     path = meta["path"]
     canon = f'\n  <link rel="canonical" href="{SITE_URL}/{path}">' if SITE_URL else ""
+    if path == "404.html":
+        canon = '\n  <meta name="robots" content="noindex">'
     ogurl = f'\n  <meta property="og:url" content="{SITE_URL}/{path}">' if SITE_URL else ""
-    ogimg = f"{SITE_URL}/assets/img/og-skom-children-janna-island.jpg"
+    ogimg = f"{SITE_URL}/assets/img/og-skom-logo.jpg"
     return f"""<!doctype html>
 <html lang="en-GB">
 <head>
@@ -172,10 +174,13 @@ def head(meta):
   <meta property="og:image" content="{ogimg}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Children and adult leaders gathered outdoors in the Ssese Islands, Uganda">
+  <meta property="og:image:alt" content="Ssesse Kids Outreach Ministries (SKOM) logo: hands of many skin tones in a circle around a heart">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/assets/img/skom-logo.png" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
